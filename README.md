@@ -7,4 +7,4 @@
 
 ## How to Run  
 1. Clone the repo  
-2. Open `index.html` in your browser  
+2. Open `launchpad.html` in your browser  
