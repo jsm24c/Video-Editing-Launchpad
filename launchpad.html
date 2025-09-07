@@ -6,28 +6,44 @@
   <title>Editing Launchpad</title>
   <style>
 
+
     body {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
       background-color: #21b8cc;
     }
 
-    .icon-row{
-      display: flex;
-      gap: 50px;   
+    .icon {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
     }
 
-    .icon-row img {
+    .icon-row {
+      display: flex;     
+      gap: 40px;       
+      flex-wrap: wrap;    
+      text-align: center;
+    }
+
+    .icon img {
       width: 200 px;
       height: 200 px;
       cursor: pointer;
       transition: transform 0.3s;
     }
 
-    .icon-row img:hover {
+    .icon img:hover {
       transform: scale(1.1);
+    }
+
+    .icon p {
+      margin-top: 10px;
+      font-size: 20px;
+      color: white
     }
     
   </style>
@@ -35,26 +51,42 @@
 
 <body>
   <div class="icon-row">
-   <a href="https://start.elevenlabs.io/" target="_blank">
-    <img src="tts.png" alt="Text-to-Speech" width="300" height="300">
-    </a>
+    <div class="icon">
+      <a href="https://start.elevenlabs.io/" target="_blank">
+      <img src="tts.png" alt="Text-to-Speech" width="300" height="300">
+      </a>
+      <p> Text-to-Speech</p>
+    </div>
 
-   <a href="https://www.dafont.com/top.php" target="_blank">
-    <img src="font.png" alt="Font Picker" width="300" height="300">
-    </a>
+  
+    <div class="icon">
+      <a href="https://www.dafont.com/top.php" target="_blank">
+      <img src="font.png" alt="Font Picker" width="300" height="300">
+      </a>
+      <p> Font Picker</p>
+    </div>
 
-   <a href="https://v4.www-y2mate.com/" target="_blank">
-    <img src="y2mate.png" alt="Youtube Video Downloader" width="300" height="300">
-    </a>
+    <div class="icon">
+      <a href="https://v4.www-y2mate.com/" target="_blank">
+      <img src="y2mate.png" alt="Youtube Video Downloader" width="300" height="300">
+      </a>
+      <p> Youtube Video Downloader</p>
+    </div>
 
-   <a href ="https://freshluts.com/luts" target = "_blanlk">
-    <img src="luts.png" alt="LUTs" width="300" height="300">
-    </a>
+    <div class="icon">
+      <a href ="https://freshluts.com/luts" target = "_blanlk">
+        <img src="luts.png" alt="LUTs" width="300" height="300">
+      </a>
+      <p> LUTs</p>
+    </div>
 
-<a href="https://docs.google.com/document/d/12-C1Reu0s2bdL1LuW2Q5QjQM2PvrRY6flwyZX9jFI20/edit?tab=t.0" target = "_blank">
-    <img src="how to.png" alt="How-To's" width="300" height="300">
-</a>
-</div>
+    <div class="icon">
+      <a href="https://docs.google.com/document/d/12-C1Reu0s2bdL1LuW2Q5QjQM2PvrRY6flwyZX9jFI20/edit?tab=t.0" target = "_blank">
+      <img src="how to.png" alt="How-To's" width="300" height="300">
+      </a>
+      <p> How-To's</p>
+    </div>
+  </div>
 </body>
 
 </html>
