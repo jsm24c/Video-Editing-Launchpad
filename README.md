@@ -4,6 +4,7 @@
 
 ## Features   - Clickable icons for quick access to editing resources   - Clean and minimal HTML/CSS design   - Easy to customize  
 
+## Includes LUT's, Text-To-Speech, Font Library, Video Downloader, and How-To's for various transitions and effects
 
 ## How to Run  
 1. Clone the repo  
