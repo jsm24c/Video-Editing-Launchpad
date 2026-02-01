@@ -8,43 +8,7 @@
 </head>
 
 <body>
-  <div class="icon-row">
-    <div class="icon">
-      <a href="https://start.elevenlabs.io/" target="_blank">
-      <img src="tts.png" alt="Text-to-Speech" width="300" height="300">
-      </a>
-      <p> Text-to-Speech</p>
-    </div>
-
-  
-    <div class="icon">
-      <a href="https://www.dafont.com/top.php" target="_blank">
-      <img src="font.png" alt="Font Picker" width="300" height="300">
-      </a>
-      <p> Font Picker</p>
-    </div>
-
-    <div class="icon">
-      <a href="https://v4.www-y2mate.com/" target="_blank">
-      <img src="y2mate.png" alt="Youtube Video Downloader" width="300" height="300">
-      </a>
-      <p> Youtube Video Downloader</p>
-    </div>
-
-    <div class="icon">
-      <a href ="https://freshluts.com/luts" target = "_blanlk">
-        <img src="luts.png" alt="LUTs" width="300" height="300">
-      </a>
-      <p> LUTs</p>
-    </div>
-
-    <div class="icon">
-      <a href="https://docs.google.com/document/d/12-C1Reu0s2bdL1LuW2Q5QjQM2PvrRY6flwyZX9jFI20/edit?tab=t.0" target = "_blank">
-      <img src="how to.png" alt="How-To's" width="300" height="300">
-      </a>
-      <p> How-To's</p>
-    </div>
-  </div>
+  <div id="root"></div>
 
   <button id="openNotepadBtn">Open Notepad</button>
 
@@ -53,6 +17,10 @@
     <button id="closeNotepadBtn">Close</button>
   </div>
 
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="app.jsx" type="text/babel"></script>
   <script src="script.js"></script>
 </body>
 
