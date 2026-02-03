@@ -41,12 +41,13 @@
     /* Notepad hidden at first */
 #notepad {
   position: fixed;
-  bottom: -300px;  /* hidden off-screen */
+  bottom: -420px;  /* hidden off-screen */
   left: 50%;
   transform: translateX(-50%);
-  width: 80%;
-  max-width: 600px;
-  height: 250px;
+  width: 90%;
+  max-width: 560px;
+  max-height: 400px;
+  height: 400px;
   background: white;
   border: 2px solid #333;
   border-radius: 10px 10px 0 0;
@@ -54,6 +55,7 @@
   transition: bottom 0.4s ease;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /* Show notepad */
@@ -61,24 +63,155 @@
   bottom: 0;
 }
 
-#notepad textarea {
-  flex: 1;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  outline: none;
-  resize: none;
+.notepad-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  flex-shrink: 0;
 }
 
-#notepad button {
+.notepad-add {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  background: #21b8cc;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.notepad-form {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.notepad-title-input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.notepad-content-input {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  margin-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.notepad-form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.notepad-form-actions button,
+.notepad-item-actions button {
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  background: #21b8cc;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.notepad-form-actions button:last-child,
+.notepad-item-actions button:last-child {
+  background: #666;
+}
+
+.notepad-error {
+  color: #c00;
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+.notepad-list {
+  flex: 1;
+  overflow-y: auto;
+  list-style: none;
+  margin: 0;
+  padding: 8px 12px;
+}
+
+.notepad-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  gap: 8px;
+}
+
+.notepad-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.notepad-item-body strong {
+  font-size: 14px;
+  color: #333;
+}
+
+.notepad-item-preview {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notepad-item-actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.notepad-empty {
+  padding: 12px;
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.notepad-api-error {
+  position: fixed;
+  bottom: 420px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #c00;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  z-index: 1000;
+  margin: 0;
+}
+
+.notepad-close,
+#notepad .notepad-close {
   border: none;
   padding: 10px;
-  background: #21b8cc;
+  background: #333;
   color: white;
   font-size: 16px;
   cursor: pointer;
   border-top: 1px solid #ccc;
   border-radius: 0 0 10px 10px;
+  flex-shrink: 0;
 }
 
 #openNotepadBtn {
