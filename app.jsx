@@ -5,12 +5,12 @@ const API_BASE = 'http://localhost:3001';
 
 // 1. The data — one array, one place to add/remove/edit tools
 const TILES = [
-  { id: 'tts', name: 'Text-to-Speech', url: 'https://start.elevenlabs.io/', image: 'tts.png' },
-  { id: 'font', name: 'Font Picker', url: 'https://www.dafont.com/top.php', image: 'font.png' },
-  { id: 'y2mate', name: 'Youtube Video Downloader', url: 'https://v4.www-y2mate.com/', image: 'y2mate.png' },
-  { id: 'luts', name: 'LUTs', url: 'https://freshluts.com/luts', image: 'luts.png' },
-  { id: 'howto', name: "How-To's", url: 'https://docs.google.com/document/d/12-C1Reu0s2bdL1LuW2Q5QjQM2PvrRY6flwyZX9jFI20/edit?tab=t.0', image: 'how to.png' },
-  { id: 'SFX', name: "SFX", url: 'https://pixabay.com/', image: 'how to.png' }
+  { id: 'tts', name: 'Text-to-Speech', url: 'https://start.elevenlabs.io/', image: 'images/tts.png' },
+  { id: 'font', name: 'Font Picker', url: 'https://www.dafont.com/top.php', image: 'images/font.png' },
+  { id: 'y2mate', name: 'Youtube Video Downloader', url: 'https://v4.www-y2mate.com/', image: 'images/y2mate.png' },
+  { id: 'luts', name: 'LUTs', url: 'https://freshluts.com/luts', image: 'images/luts.png' },
+  { id: 'howto', name: "How-To's", url: 'https://docs.google.com/document/d/12-C1Reu0s2bdL1LuW2Q5QjQM2PvrRY6flwyZX9jFI20/edit?tab=t.0', image: 'images/how to.png' },
+  { id: 'SFX', name: "SFX", url: 'https://pixabay.com/', image: 'images/how to.png' }
 ];
 
 // 2. Tile — one link box (receives name, url, image as props)
@@ -186,6 +186,10 @@ function App() {
 
   return (
     <>
+      <header className="launchpad-header">
+        <h1>Editing Launchpad</h1>
+        <p>Your tools, one click away</p>
+      </header>
       <TileGrid tiles={TILES} />
       <button id="openNotepadBtn" type="button" onClick={() => setIsOpen(true)}>Open Notepad</button>
       <Notepad

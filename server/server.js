@@ -22,7 +22,7 @@ db.exec(`
 
 // Allow the React app (e.g. from Live Server on another port) to call this API
 app.use(cors());
-// Parse JSON request bodies (for POST and PUT)
+// Parse JSON request bodies (for POST and PUT) 
 app.use(express.json());
 
 // GET /api/notes — return all notes, newest first
