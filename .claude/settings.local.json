@@ -3,7 +3,9 @@
     "allow": [
       "Bash(mkdir images *)",
       "Bash(mv \"font.png\" \"y2mate.png\" \"luts.png\" \"tts.png\" \"how to.png\" images/)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
